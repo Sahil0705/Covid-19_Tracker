@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='jquery-ui/jquery-ui.js' type='text/javascript'></script>
+        <link rel='stylesheet' href='jquery-ui/jquery-ui.css'>
+        <link rel='stylesheet' href='jquery-ui/jquery-ui-structure.css'>
+        <link rel='stylesheet' href='jquery-ui/jquery-ui-theme.css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Solway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Secular One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Averia Gruesa Libre' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css" integrity="sha512-gFn7XRm5v3GlgOwAQ80SXDT8pyg6uaV9JbW2OkNx5Im2jR8zx2X/3DbHymcZnUraU+klZjRJqNfNkFN7SyR3fg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="script.js"></script> 
+        <link rel="stylesheet" href="style.css">
+</head>
+<body onload="getCovidapi()">
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" style='position: sticky;top: 0;opacity:1; z-index:10'>
+  <a class="navbar-brand" href="#">COVID-19 Tracker <img src='images/corona.png' width=45px height=40px></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar"">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#home" id='nav1'>Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#abt" id='nav1'>About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#update" id='nav1'>Stats</a>
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" href="#symp" id='nav1'>Symptoms</a>
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" href="#preven" id='nav1'>Prevention</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+<br id='home'><br>
+
+
+<div class='main_header' >
+    <div class='row w-100 h-100'>
+        <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+            <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+                <img src="images/covid_unity.png" width="300" height="300">
+            </div>
+        </div>               
+        <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+            <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+                 <h1 align='center'>Let's Stay Safe & Fight Together Against Cor<span class="corona_rot"> <img src='images/corona.png' width=60px height=60px> </span>na Virus</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<br<br id='abt'><br>><br>
+<div class="container-fluid sub_section pt-5 pd-5" id='aboitid'>
+    <div class='section_header text-center mb-5 mt-4'>
+        <h1 class='about'>About COVID-19</h1>
+    </div>
+
+    <div class="row pt-3" style='margin-left:20px;'>
+        <div class="col-lg-5 col-md-6 col-12 pt-5" id='aboutcor'>
+            <img src="images/aboutcorona.png" class='img-fluid' width=100% height=100%>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+            <h2 class='what'><br>What is (CORONA Virus)</h2>
+            <p class='what1'>Coronaviruses are a family of viruses that can cause respiratory illness in humans. They get their name, “corona,” from the many crown-like spikes on the surface of the virus. Severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and the common cold are examples of coronaviruses that cause illness in humans.
+
+            </p>
+            <p class='what1'>Researchers are still learning about COVID-19. What IS known is that people infected with COVID-19 can spread the virus to others before experiencing symptoms themselves (while people are still “asymptomatic”). Once you do have symptoms, the CDC says you are no longer contagious 10 days after your symptoms began.</p>
+        </div>
+    </div>
+    <br><br>
+</div>
+<br><br>
+<br><br id='update'><br><br>
+<section class="corona_update">
+    <div class="mb-3">
+        <h3 class="text-uppercase text-center">covid-19 latest updates</h3>
+    </div>
+    <br>
+    <div>
+        <table align='center' id='myRadio'><tr><td><input type="radio" name="myRadios" id='myRadio1' onchange="handleChange();" value="Country"/>&nbsp;Country Wise
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="myRadios" id='myRadio2' onchange="handleChange();" value="State"  />&nbsp;State Wise</div>
+        </td></tr></table>
+        <br>
+        <div id='div3'>
+            <table align='center'><tr><td>
+            <input type='text' id='user' placeholder='Search by Country name'>
+            <button type='button' id='s1' onclick=filter_country();>Submit</button></td></tr></table>
+            <br><br>
+    <div id='country_summary' class="row w-100 h-100 d-flex justify-content-around align-items-center">
+        
+    </div>
+        </div>
+        <div id='div5'>
+            <table align='center'><tr><td>
+            <input type='text' id='user1' placeholder='Search by State name'>
+            <button type='button' id='s1' onclick=filter_state();>Submit</button></td></tr></table>
+                <br><br>
+                <div id='state_summary' class="row w-100 h-100 d-flex justify-content-around align-items-center">
+        
+                </div>
+        </div>
+</section>
+
+<br><br>
+    
+
+            
+            
+        <div id='div1' style="position: relative; overflow-y:scroll;">
+
+        <table align='center' width='100%' id='transact' cellpadding=15px style="border-radius: 15px;" class='table_sticky'>
+			<tr>
+				<th align='center'>Countries</th>
+				<th align='center'>Country Code</th>
+				<th align='center'>New Confirmed</th>
+				<th align='center'>New Deaths</th>
+                <th align='center'>Total Confirmed</th>
+                <th align='center'>Total Deaths</th>
+			</tr>
+
+           <script>
+               table1 = document.getElementById('transact');
+                for (row = 0; row < 192; row++) 
+                {
+                    tr = document.createElement('tr');
+                    for (cell = 1; cell < 7; cell++) {
+                        td = document.createElement('td');
+                        td.className = "container".concat(cell.toString().concat((row+1).toString()));
+                        tr.appendChild(td);
+                        //alert(td.className);
+                    }
+                    table1.appendChild(tr);
+                }
+           </script>
+		
+		</table>
+
+        </div>
+
+        
+
+
+        <div id='div2' style="position: relative; overflow-y:scroll;">
+
+            <table align='center' width='100%' id='transact1' cellpadding=15px style="border-radius: 15px;" class='table_sticky'>
+                <tr>
+                    <th align='center'>State</th>
+                    <th align='center'>State Code</th>
+                    <th align='center'>Active</th>
+                    <th align='center'>Confirmed</th>
+                    <th align='center'>Deaths</th>
+                    <th align='center'>Delta Confirmed</th>
+                    <th align='center'>Delta Deaths</th>
+                    <th align='center'>Delta Recovered</th>
+                </tr>
+    
+               <script>
+                   table1 = document.getElementById('transact1');
+                    for (row = 0; row < 38; row++) 
+                    {
+                        tr = document.createElement('tr');
+                        for (cell = 1; cell < 9; cell++) {
+                            td = document.createElement('td');
+                            td.className = "state".concat(cell.toString().concat((row+1).toString()));
+                            tr.appendChild(td);
+                            //alert(td.className);
+                        }
+                        table1.appendChild(tr);
+                    }
+               </script>
+            
+            </table>
+    
+            </div>
+            <br>
+            <div id='div4' style="position: relative; overflow-y:scroll;">
+
+                <table align='center' width='100%' id='transact' cellpadding=15px style="border-radius: 15px;" class='table_sticky'>
+                    <tr>
+                        <th align='center'>Countries</th>
+                        <th align='center'>Country Code</th>
+                        <th align='center'>New Confirmed</th>
+                        <th align='center'>New Deaths</th>
+                        <th align='center'>Total Confirmed</th>
+                        <th align='center'>Total Deaths</th>
+                    </tr>
+                    <tr>
+                        <td align='center' id='country'></td>
+                        <td align='center' id='count_code'></td>
+                        <td align='center' id='new_conf'></td>
+                        <td align='center' id='new_death'></td>
+                        <td align='center' id='tot_conf'></td>
+                        <td align='center' id='tot_death'></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id='div6' style="position: relative; overflow-y:scroll;">
+
+                <table align='center' width='100%' id='transact' cellpadding=15px style="border-radius: 15px;" class='table_sticky'>
+                    <tr>
+                        <th align='center'>State</th>
+                        <th align='center'>State Code</th>
+                        <th align='center'>Active</th>
+                        <th align='center'>Confirmed</th>
+                        <th align='center'>Deaths</th>
+                        <th align='center'>Delta Confirmed</th>
+                        <th align='center'>Delta Deaths</th>
+                        <th align='center'>Delta Recovered</th>
+                    </tr>
+                    <tr>
+                        <td align='center' id='state'></td>
+                        <td align='center' id='state_code'></td>
+                        <td align='center' id='active'></td>
+                        <td align='center' id='confirmed'></td>
+                        <td align='center' id='deaths'></td>
+                        <td align='center' id='delta_conf'></td>
+                        <td align='center' id='delta_death'></td>
+                        <td align='center' id='delta_recov'></td>
+                    </tr>
+                </table>
+            </div>
+        
+          <br><br id='symp'><br><br>
+          
+          <div class="container-fluid pt-5 pb-5 sub_section" id='aboutid'>
+              <div class="section_header text-center mb-5 mt-4">
+                  <h1 class='about'>Corona Virus Symptoms</h1>
+              </div>
+              <div class="container">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 mt-5" id='i1'>
+                        <figure class='text-center'> 
+                        <img src='images/cough.png' class='img-fluid' width="120" height="120"> 
+                        <figcaption class='what1'><br>Cough 😣</figcaption>
+                    </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5" id='i2'>
+                        <figure class='text-center'> 
+                        <img src='images/running_nose.png' class='img-fluid' width="120" height="120"> 
+                        <figcaption class='what1'><br>Running Nose 🤧</figcaption>
+                    </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-4" id='i3'>
+                        <figure class='text-center'> 
+                        <img src='images/fever1.png' class='img-fluid' width="190" height="190"> 
+                        <figcaption class='what1'><br>Fever 🤒</figcaption>
+                    </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5" id='i4'>
+                        <figure class='text-center'> 
+                        <img src='images/cold.png' class='img-fluid' width="130" height="120"> 
+                        <figcaption class='what1'><br>Cold 🥶</figcaption>
+                    </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5" id='i5'>
+                        <figure class='text-center'> 
+                        <img src='images/tired.png' class='img-fluid' width="120" height="120"> 
+                        <figcaption class='what1'><br>Tiredness 😞</figcaption>
+                    </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-3" id='i6'>
+                        <figure class='text-center'> 
+                        <img src='images/breathing_issue.png' class='img-fluid' width="200"> 
+                        <figcaption class='what1'><br>Breathing Problem 😩</figcaption>
+                    </figure>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        
+          <br><br id='preven'><br>
+          <div class="container-fluid pt-5 pb-5" id='prevention'>
+              <div class="section_header1 text-center mb-5 mt-4">
+                  <h1 class="about">Prevention Agains Corona Virus</h1>
+              </div>
+
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <figure class='text-center'> 
+                                        <img src='images/santizer.png' class='img-fluid' width="220px"> 
+                                    </figure>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <p class='what1'>Wash your hands regularly gor 20 seconds, with soap and water or alcohol-based hand rub 🙌</p>
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-12 mt-5">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <figure class='text-center'> 
+                                    <img src='images/mask.png' class='img-fluid' width="220px"> 
+                                </figure>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-12">
+                                <p class='what1'>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze 😷</p>
+                            </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <figure class='text-center'> 
+                                <img src='images/social-distancing.png' class='img-fluid' width="270"> 
+                            </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <p class='what1'>Avoid close contact (1 meter or 3 feet) with people who are unwell 👨‍👨‍👧‍👧❌</p>
+                        </div>
+                    </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-12 mt-5">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class='text-center'> 
+                            <img src='images/stay_home.png' class='img-fluid' width="220px"> 
+                        </figure>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class='what1'>Stay home and self-isolate from others in the household if you feel unwell 🏡</p>
+                    </div>
+                </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <figure class='text-center'> 
+                        <img src='images/watch_news.jpg' class='img-fluid' width="220px"> 
+                    </figure>
+                </div>
+                <div class="col-lg-8 col-md-8 col-12">
+                    <p class='what1'>Stay informed by watchingnews & follow the recommmended practices 📺</p>
+                </div>
+            </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+                <figure class='text-center'> 
+                    <img src='images/doctor.png' class='img-fluid' width="220px"> 
+                </figure>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+                <p class='what1'>If you have any coivd-19 symptoms then seek medical care as soon as possible 👨🏻‍⚕️</p>
+            </div>
+        </div>
+  </div>
+                  </div>
+              </div>
+          </div>
+<br>
+<hr width="75%">
+<table align='center'><tr><td><h2 align='center' style="font-family: Trebuchet MS, sans-serif;font-size: 25px; ">Print the Page for futute Reverence</h2></td></tr>
+<tr><td align='center'><button type='button' id='s1' style="margin-left:30px;margin-right:30px;" onclick='print1()'>Print</button></td></tr></table>
+          <br><br><br>
+<table width=100% height=60px style="bottom:0; left:0; right:0; background-color: black;">
+  <tr><td align='center'><font color=white size=4px>Copyright 2021 @Sahil Sachin Donde 😀</font></td></tr></table>
+</body>
+</html>
+
+
